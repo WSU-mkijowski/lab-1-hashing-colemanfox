@@ -25,8 +25,7 @@ Answer the following in this file:
 	* I would store it in a more secure file, one with which only I had access to or one with a password protection. I would do this because this is important data.
 
 ```bash
-please put any cool bash one-liners or other piped commands you
-learned/struggled with for task 1 here
+cat salted_data.csv | awk -F ',' '{ print $1}'
 ```
 
 ---
@@ -42,19 +41,26 @@ Answer the following:
 hash)
 
 ```
+00018c2e23b216fccf037ff20a24964c16d684b1ce2a406dc20b360fedcc332e  -, 888orange
+000f66376a62aa9435f3249e9d65754d58233f7741983856230732f3d4529b19  -, 3655orange
+00049cf9f19572a0d18779189448f7316b977d48edfb4af3d86ca2c64693d852  -, 17960orange
 
 ```
 
 * How many words were in your dictionary?
+	* I left the dictionary how it came from the initial commit, so 14.
 * How many nonces did your code iterate over?
+	* My code iterated over 20,000 nonces
 * What was the maximum number of hashes your code *could* compute given the above?
+	* It could have computed 20,000 hashes
 * What did you think about Task 2?
+	* I enjoyed Task 2, it helped me understand hashing and datamining further than a surface level understanding.
 * Is there a better way than brute force to attempt to get higher valued coins?
+	* No
 * Why or why not?
-
+	* While you can use additional tools such as scripting, brute force is the best way to get higher value coins because there is no apparent secret to what makes a good nonce/ salt and what doesn't.
 
 ```bash
-please put any cool bash one-liners or other piped commands you
-learned/struggled with for task 2 here
+for i in $(seq 20000); do saltedword="$i"orange; hashval=$( echo -n $saltedword | sha256sum); echo "$hashval, $saltedword"; done | grep ^000
 ```
 
