@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/SPs4PNWX)
 # Lab 1 : CEG 3400 Intro to Cyber Security
 
-## Name:
+## Name: Coleman Fox
 
 ### Task 1: Hashing
 
@@ -10,14 +10,19 @@
 Answer the following in this file:
 
 * How many unique users are in the data?
+	* 42
 * How many salts did you create?
+	* 42
 * How many possible combinations will I need to try to figure out the secret ID
   of all students (assume I know all potential secret IDs and have your 
   `salted-data.csv`)
+	* 42^2, or 1764
 * Instead of salts, if you were to use a nonce (unique number for each hashed
   field) how many possible combinations would I need to try?
+	* 42 times 1303 (the number of entries), which is 54726
 * Given the above, if this quiz data were *actual* class data, say for example
   your final exam, how would you store this dataset?  Why?
+	* I would store it in a more secure file, one with which only I had access to or one with a password protection. I would do this because this is important data.
 
 ```bash
 please put any cool bash one-liners or other piped commands you

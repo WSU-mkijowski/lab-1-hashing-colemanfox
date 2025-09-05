@@ -1,0 +1,2 @@
+for i in $(seq 20000); do saltedword="$i"orange; hashval=$( echo -n $saltedword | sha256sum); echo "$has
+hval, $saltedword"; done | grep ^000
